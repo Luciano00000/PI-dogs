@@ -6,7 +6,8 @@ const getDogsHandler = async (req, res) => {
         const name = req.query.name
         let dogsTotal = await getAllDogs();
     if(name){
-        let dogName = await dogsTotal.filter( el => el.name.toLowerCase().includes(name.toLowerCase()))
+        let dogName = dogsTotal.filter( 
+            (el) => el.name.toLowerCase().includes(name.toLowerCase()))
         dogName.length ?
         res.status(200).send(dogName) :
         res.status(404).send("No se encuentra la raza");

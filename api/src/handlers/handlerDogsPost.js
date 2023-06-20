@@ -9,6 +9,7 @@ const postDogsHandler = async (req, res) => {
     height,
     weight,
     lifespan,
+    createdInDb,
     temperaments  
   } = req.body;
 
@@ -19,6 +20,7 @@ const postDogsHandler = async (req, res) => {
       height,
       weight,
       lifespan,
+      createdInDb,
       temperaments: await Temperament.findAll({
         where: { name: temperaments }
       })

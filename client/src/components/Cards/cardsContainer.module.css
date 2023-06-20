@@ -1,0 +1,17 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+    height: 50vh;
+    width: 90%;
+    min-width: 300px; 
+    max-width: 1200px;
+    min-height: 50vh;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+    margin-bottom: 10%;
+    
+    transition: transform 0.5s;
+    transform-origin: center;
+}

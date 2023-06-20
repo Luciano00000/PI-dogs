@@ -39,5 +39,10 @@ module.exports = (sequelize) => {
       //   min: 0, // Validación de valor mínimo (años de vida no pueden ser negativos)
       // },
     },
+    createdInDb: {
+      type : DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: true,
+    }
   },{timestamps:false});
 };
